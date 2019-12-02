@@ -1,0 +1,17 @@
+name: Ubuntu C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: make
+      env:
+        SUBTARGET: tiny
+        MAME: mametiny64
+      run:
+        make
