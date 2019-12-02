@@ -14,5 +14,6 @@ jobs:
         SUBTARGET: tiny
         MAME: mametiny64
       run:
+        brew install sdl2
         make
 
