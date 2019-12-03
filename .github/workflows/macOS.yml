@@ -12,6 +12,7 @@ jobs:
       MAME: mametiny64
       OPTIMIZE: 0
       SUBTARGET: tiny
+      SOURCE: src/tools/chdman.cpp
       TOOLS: 1
     
     steps:
@@ -25,3 +26,10 @@ jobs:
       run: |
         unset LDOPTS
         make
+    - name: Download artifact
+      uses: actions/download-artifact@v1.0.0
+        with:
+          # Artifact name
+          name: chdman # optional
+          # artifact source
+          source: ./bin/ # optional, default is current
