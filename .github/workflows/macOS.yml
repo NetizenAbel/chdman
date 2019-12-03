@@ -7,15 +7,16 @@ jobs:
 
     runs-on: macOS-latest
     
+    env:
+      SUBTARGET: chdman
+      SOURCES: src/tools/chdman.cpp
+      REGENIE: 1
+      TOOLS: 1
+    
     steps:
     - uses: actions/checkout@v1
+    - name: Install SDL2
+      run: brew install sdl2
     - name: make
-      env:
-        SUBTARGET: chdman
-        SOURCES: src/tools/chdman.cpp
-        REGENIE: 1
-        TOOLS: 1
-      run: |
-        brew install sdl2
-        make
+      run: make
 
