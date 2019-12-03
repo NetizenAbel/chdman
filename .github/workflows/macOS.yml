@@ -15,5 +15,5 @@ jobs:
         SOURCES: src/tools/chdman.cpp
       run: |
         brew install sdl2
-        gmake
+        make SUBTARGET=chdman SOURCES=src/tools/chdman.cpp
 
