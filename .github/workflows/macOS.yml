@@ -17,5 +17,7 @@ jobs:
     - name: Make
       run: |
         brew install sdl2
+        sudo chown root:wheel /usr/local/bin/brew
+        sudo brew link sdl2
         make TOOLS=1 REGENIE=1 SOURCES=src/tools/chdman.cpp
 
