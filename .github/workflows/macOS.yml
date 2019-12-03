@@ -13,7 +13,7 @@ jobs:
       env:
         SUBTARGET: chdman
         SOURCES: src/tools/chdman.cpp
-      run:
+      run: |
         brew install sdl2
         gmake
 
