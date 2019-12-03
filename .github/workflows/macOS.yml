@@ -14,12 +14,13 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Install SDL2 dependency
+      run: |
+        brew update
+        brew install sdl2 sdl2_ttf
     - name: Make
       env:
         LIBRARY_PATH: $LIBRARY_PATH:/usr/local/lib
-        TOOLS: 1
-        REGENIE: 1
       run: |
-        brew install sdl2
         export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib" 
         make TOOLS=1 REGENIE=1
