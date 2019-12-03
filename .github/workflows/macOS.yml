@@ -19,7 +19,7 @@ jobs:
     - name: Install SDL2 dependency
       run: |
         brew update
-        brew install sdl2 sdl2_ttf
+        brew install asio flac glm jpeg lua pkg-config portaudio portmidi pugixml rapidjson sdl2 sdl2_ttf sphinx-doc sqlite utf8proc
         export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib" 
     - name: Make
       run: |
