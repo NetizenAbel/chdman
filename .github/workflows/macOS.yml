@@ -18,5 +18,7 @@ jobs:
       run: |
         brew install sdl2
         brew link sdl2
-        make TOOLS=1 REGENIE=1 SOURCES=src/tools/chdman.cpp
+        LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+        TOOLS=1 REGENIE=1 SOURCES=src/tools/chdman.cpp
+        make
 
