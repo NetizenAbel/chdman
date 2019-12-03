@@ -13,6 +13,8 @@ jobs:
       env:
         SUBTARGET: chdman
         SOURCES: src/tools/chdman.cpp
+        REGENIE: 1
+        TOOLS: 1
       run: |
         brew install sdl2
         make SUBTARGET=chdman SOURCES=src/tools/chdman.cpp
