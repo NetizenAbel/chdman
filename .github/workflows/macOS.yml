@@ -28,8 +28,6 @@ jobs:
         make
     - name: Download artifact
       uses: actions/download-artifact@v1.0.0
-        with:
-          # Artifact name
-          name: chdman # optional
-          # artifact source
-          source: ./bin/ # optional, default is current
+      with:
+        name: chdman
+        source: bin/
