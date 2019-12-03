@@ -8,8 +8,10 @@ jobs:
     runs-on: macOS-latest
     
     env:
-      SOURCES: src/tools/chdman.cpp
-      REGENIE: 1
+      USE_LIBSDL: 1
+      MAME: mametiny64
+      OPTIMIZE: 0
+      SUBTARGET: tiny
       TOOLS: 1
     
     steps:
@@ -18,9 +20,8 @@ jobs:
       run: |
         brew update
         brew install sdl2 sdl2_ttf
-    - name: Make
-      env:
-        LIBRARY_PATH: $LIBRARY_PATH:/usr/local/lib
-      run: |
         export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib" 
-        make TOOLS=1 REGENIE=1
+    - name: Make
+      run: |
+        unset LDOPTS
+        make
