@@ -9,9 +9,7 @@ jobs:
     
     env:
       USE_LIBSDL: 1
-      MAME: mametiny64
       OPTIMIZE: 0
-      SUBTARGET: tiny
       SOURCE: src/tools/chdman.cpp
       TOOLS: 1
     
@@ -30,5 +28,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: chdman
-        path: ./tools
+        name: mame
+        path: ./
