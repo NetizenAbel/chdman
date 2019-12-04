@@ -26,8 +26,8 @@ jobs:
       run: |
         unset LDOPTS
         make
-        ls bin/**/chdman
+        ls bin/
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        path: ./
+        path: bin/chdman
