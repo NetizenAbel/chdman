@@ -19,7 +19,7 @@ jobs:
       run: |
         brew update
         brew install asio flac glm jpeg lua pkg-config portaudio portmidi pugixml rapidjson sdl2 sdl2_ttf sphinx-doc sqlite utf8proc
-        export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib" 
+        export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib" SOURCE="src/tools/chdman.cpp"
     - name: Make
       run: |
         unset LDOPTS
@@ -29,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: mame
-        path: ./
+        path: ./**/chdman
