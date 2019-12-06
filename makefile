@@ -12,32 +12,33 @@
 #################   BEGIN USER-CONFIGURABLE OPTIONS   #####################
 ###########################################################################
 
-# REGENIE = 1
-# VERBOSE = 1
-# NOWERROR = 1
-# IGNORE_GIT = 1
+ REGENIE = 1
+ VERBOSE = 1
+ NOWERROR = 1
+ IGNORE_GIT = 1
 
 # TARGET = mame
 # SUBTARGET = tiny
-# TOOLS = 1
+ TOOLS = 1
 # TESTS = 1
 # BENCHMARKS = 1
 # OSD = sdl
+ SOURCES = src/tools/chdman.cpp
 
-# NO_OPENGL = 0
+ NO_OPENGL = 1
 # USE_DISPATCH_GL = 0
 # MODERN_WIN_API = 0
 # DIRECTINPUT = 7
 # USE_SDL = 1
 # SDL_INI_PATH = .;$HOME/.mame/;ini;
 # SDL2_MULTIAPI = 1
-# NO_USE_MIDI = 1
-# NO_USE_PORTAUDIO = 1
+ NO_USE_MIDI = 1
+ NO_USE_PORTAUDIO = 1
 # DONT_USE_NETWORK = 1
 # USE_QTDEBUG = 1
-# NO_X11 = 1
-# NO_USE_XINPUT = 1
-# NO_USE_XINPUT_WII_LIGHTGUN_HACK = 1
+ NO_X11 = 1
+ NO_USE_XINPUT = 1
+ NO_USE_XINPUT_WII_LIGHTGUN_HACK = 1
 # FORCE_DRC_C_BACKEND = 1
 
 # DEBUG = 1
@@ -79,7 +80,7 @@
 # MESA_INSTALL_ROOT = /opt/mesa
 # SDL_INSTALL_ROOT = /opt/sdl2
 # SDL_FRAMEWORK_PATH = $(HOME)/Library/Frameworks
-# USE_LIBSDL = 1
+ USE_LIBSDL = 1
 # CYGWIN_BUILD = 1
 
 # BUILDDIR = build
