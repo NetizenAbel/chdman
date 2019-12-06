@@ -10,7 +10,7 @@ jobs:
     env:
       USE_LIBSDL: 1
       OPTIMIZE: 0
-      SOURCE: src/tools/chdman.cpp
+      SOURCES: src/tools/chdman.cpp
       TOOLS: 1
     
     steps:
@@ -24,9 +24,8 @@ jobs:
       run: |
         unset LDOPTS
         make
-        ls **/chdman || exit 1
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: mame
-        path: ./**/chdman
+        name: mame-tools
+        path: ./build/osx_clang/bin/x64/Release
