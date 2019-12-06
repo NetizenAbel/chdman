@@ -6,23 +6,16 @@ jobs:
   build:
 
     runs-on: macOS-latest
-    
-    env:
-      USE_LIBSDL: 1
-      OPTIMIZE: 0
-      SOURCES: src/tools/chdman.cpp
-      TOOLS: 1
-    
+
     steps:
     - uses: actions/checkout@v1
-    - name: Install SDL2 dependency
+    - name: Install dependencies
       run: |
         brew update
         brew install asio flac glm jpeg lua pkg-config portaudio portmidi pugixml rapidjson sdl2 sdl2_ttf sphinx-doc sqlite utf8proc
-        export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib" SOURCES="src/tools/chdman.cpp"
+        export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
     - name: Make
       run: |
-        unset LDOPTS
         make
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
